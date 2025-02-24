@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: hr-recruitment-ai
+    env: python
+    repo: https://github.com/utensam/HR_Recruitment_AI.git
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn main:app
+    plan: free
+    region: oregon
